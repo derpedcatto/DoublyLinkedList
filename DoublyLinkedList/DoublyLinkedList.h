@@ -22,6 +22,7 @@ private:
 public:
 	/*CONSTRUCTOR*/
 	DoublyLinkedList();
+	DoublyLinkedList(const DoublyLinkedList& original);
 	
 	/*METHODS*/
 	bool IsEmpty() const;

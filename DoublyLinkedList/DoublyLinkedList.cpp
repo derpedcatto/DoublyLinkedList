@@ -7,6 +7,16 @@ DoublyLinkedList::DoublyLinkedList()
 	tail = nullptr;
 	size = 0;
 }
+DoublyLinkedList::DoublyLinkedList(const DoublyLinkedList& original)
+{
+	Node* og_current = original.head;
+
+	while (og_current != nullptr)
+	{
+		AddToTail(og_current->data);
+		og_current = og_current->next;
+	}
+}
 
 /*PRIVATE*/
 Node* DoublyLinkedList::GetNode(int index)
